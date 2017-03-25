@@ -1,3 +1,0 @@
-gitTest
-first:you are the beautiful!
-second:you are kind!

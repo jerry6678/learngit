@@ -44,10 +44,18 @@
       只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。
   10、添加远程库
     1）登陆GitHub，在右上角找到“Create a new repo”按钮，创建一个新的仓库：
-    2）现在，我们根据GitHub的提示，在本地的learngit仓库下运行命令：
-      【$ git remote add origin git@github.com:michaelliao/learngit.git】
-
-    
+    2）【$ git remote add origin https://github.com/jerry6678/learngit.git】
+      根据GitHub的提示，在本地的learngit仓库下运行，关联远程仓库
+    3）【$ git push -u origin master】
+      把本地库的所有内容推送到远程库上；
+      第一次推送master分支时，加上了-u参数，
+      Git不但会把本地的master分支内容推送的远程新的master分支，
+      还会把本地的master分支和远程的master分支关联起来，
+      在以后的推送或者拉取时就可以简化命令。
+      
+    4）【$ git push origin master】
+      只要本地作了提交，就可以通过命令把本地master分支的最新修改推送至GitHub
+      
 四、分支创建
 五、标签管理
 六、使用GitHub

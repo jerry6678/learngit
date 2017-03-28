@@ -1,0 +1,212 @@
+css学习笔记
+一，css背景
+  background-color:#ccc;
+  background-image:url('url');
+  background-repeat:no-repeat\repeat-x;
+  background-attachment:fixed;【不会随滚动条滚动】
+  background-position:right top;
+  简单写法:不用全部写，顺序是颜色，图片，是否铺满，是否固定，位置
+  background:#fff url('url') no-repeat fixed right top
+
+二，css文本
+  color:#fff
+  text-align:center\right\justify【文本对齐】
+  text-decoration:none\underline\overline\line-through【去掉超链接下划线，给文字加下划线，上划线，划掉线】
+  text-transform:uppercase\lowercase\capitalize【大写，小写，首字母大写】
+  text-indent:50px【文字缩进】
+  line-height:120%【行和行之间的距离】
+  letter-spacing:20px【字符之间的距离】
+  word-spacing:10px【英文单词之间的距离】
+  direction:rtl\ltl【文字开始方向】
+  white-space:nowrap【禁止文字换行】
+  vertical-align:text-top\text-bottom【文字和图片在同一行，文字的水平位置】
+
+三、css字体
+  font-family:arial【文本字体】
+  font-size:150%\40px\2.5em【字体大小，40px/16=2.5em】
+  font-weight:normal\lighter\bold【字体粗细】
+  font-style:normal\italic【字体样式:正常体，斜体】
+  font-variant:small-caps【文字异体】
+  font:italic bold 1em Arial,serif【一次性设置完成】
+
+四、css链接
+  a:link{color:#000}【未访问】
+  a:visited{color:#00f}【已访问】
+  a:hover{color:#00a}【鼠标在上面】
+  a:active{color:#00d}【鼠标点击】
+  顺序:hover必须在visited之后，active必须在hover之后
+
+五，css列表
+  list-style-type:circle\disc【列表样式】
+  list-style-image:url('URL')【作为列表标记的图片】
+  list-style:square url('URL')
+
+六，css表格
+  table tr td{
+    border:1px solid black;
+    border-collapse:collapse;
+    width:100%;
+  }
+  td{
+    text-align:left;
+    vertical-align:bottom;
+    height:50px;
+    padding:10px;
+  }
+  caption{
+    caption-side:bottom;
+  }【设置表格标题位置】
+
+七，css盒子模型
+  Margin(外边距) - 清除边框外的区域，外边距是透明的。
+  Border(边框) - 围绕在内边距和内容外的边框。
+  Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+  Content(内容) - 盒子的内容，显示文本和图像。
+  解决IE8及更早版本不兼容问题可以在HTML页面声明 <!DOCTYPE html>
+  div{
+    width:220px;
+    padding:10px;
+    border:5px;
+    margin:0;
+  }【这个div的总宽度是250px，包括内容宽度22px，左右内边距共20px，左右边框共10px】
+
+八，css边框
+  注意: "border-width" 属性 如果单独使用则不起作用。要先使用 "border-style" 属性来设置边框。
+  p{
+    border:solid 2px #dcdcdc;
+  }
+  p{
+    border-style:double;
+    border-top:solid 5px #f00;
+  }
+  div{
+    border-style:solid\double\inset\outset\dashed\dotted;
+    border-width:medium\1px\5px;
+    border-color:#ffe #aaa #ddd #ccc;
+  }
+  p{
+    border-style:solid;
+    border-top-width:10px;
+    border-bottom-width:5px;
+    border-right-width:9px;
+    border-left-width:15px;
+  }
+
+九，css轮廓
+  轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。
+  轮廓（outline）属性指定元素轮廓的样式、颜色和宽度
+  p{
+    border:solid 3px green;
+    outline-style:dotted;
+    outline-width:double thick;
+    outline-color:red;
+  }
+
+十，css边距
+  margin清除周围的元素（外边框）的区域。margin没有背景颜色，是完全透明的。
+  margin可以单独改变元素的上，下，左，右边距。也可以一次改变所有的属性
+  p{
+    margin:5px/15px 10px 20px 10px/20px 80px;【全部，上右下左，上下左右】
+    margin-top/left/right/bottom:10px;
+  }
+
+十一，css填充
+  当元素的 Padding（填充）（内边距）被清除时，所"释放"的区域将会受到元素背景颜色的填充。
+  单独使用填充属性可以改变上下左右的填充。
+  缩写填充属性也可以使用，一旦改变一切都改变。
+  p{
+    pading:5px/15px 10px 20px 10px/20px 80px;【全部，上右下左，上下左右】
+    padding-top/left/right/bottom:10px;
+  }
+
+十二，css分组
+  p,h1,div{
+    color:green;
+  }
+  .test p{
+    color:blue;
+    font-size:20px;
+  }
+
+十三，css尺寸
+  p{
+    min-height:100px;
+    background-color:yellow;
+  }
+  【这个p标签的高度最少为100px，也就是黄底色的高度至少有100px，不管文字有没有占满】
+  p{
+    max-height:100px;
+    background-color:yellow;
+  }
+  【这个p标签的高度最多为100px，也就是黄底色的高度至多有100px，就是文字高度已经超过100px】
+
+十四，css显示
+  display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏。
+
+  h1.hidden{
+    visibility:hidden;
+  }【隐藏了，但是依然占用空间】
+  h2.hidden{
+    display:none;
+  }【隐藏且不占用空间】
+  p{
+    display:inline;
+  }【两个p段落会在一行上】
+  span{
+    display:block;
+  }【两个span文本会在不同行】
+
+
+十五，css定位:四种不同的定位方法
+  1.static定位
+  HTML元素的默认值，即没有定位，元素出现在正常的流中。
+  静态定位的元素不会受到top, bottom, left, right影响。
+
+  2.fixed定位
+  元素的位置相对于浏览器窗口是固定位置。
+  即使窗口是滚动的它也不会移动。
+  p.pos_fixed{
+    position:fixed;
+    top:30px;
+    left:20px;
+  }
+  注意： Fixed 定位在 IE7 和 IE8 下需要描述 !DOCTYPE 才能支持。
+  Fixed定位使元素的位置与文档流无关，因此不占据空间。
+  Fixed定位的元素和其他元素重叠。
+
+  3.relative定位
+  相对定位元素的定位是相对其正常位置。
+  p.pos_left{
+    position:relative;
+    left:-20px/20px;
+  }
+  【相对正常位置左移了20px/右移了20px】
+  提示:相对定位元素经常被用来作为绝对定位元素的容器块。
+
+  4.absolute定位
+  绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>
+  h2{
+    position:absolute;
+    left:100px;
+    top150px;
+  }【绝对位置，距离页面左上分别100px和150px】
+  注意:Absolutely定位使元素的位置与文档流无关，因此不占据空间。
+  Absolutely定位的元素和其他元素重叠。
+
+  5.重叠的元素
+  元素的定位与文档流无关，所以它们可以覆盖页面上的其它元素
+  z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面）
+  img{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+  }
+  【如果有文字和图片重叠，因为该图片设置了z-index为-1，所以图片会在文字底下】
+
+  6.
+
+
+
+
+   选择文件

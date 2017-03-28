@@ -67,6 +67,7 @@
     2）【git clone https://github.com/jerry6678/gitskills】
      or【git clone git@github.com:jerry6678/gitskills.git】
       将远程仓库克隆到本地。
+  12、
 四、分支创建
 五、标签管理
 六、使用GitHub

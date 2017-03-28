@@ -300,3 +300,38 @@ css学习笔记
       width:300px;
       background-color:#b0e0e6;
     }
+    
+十八、CSS 组合选择符
+  1、在 CSS3 中包含了四种组合方式:
+    后代选取器(以空格 分隔)
+    子元素选择器(以大于>号分隔）
+    相邻兄弟选择器（以加号=分隔）
+    普通兄弟选择器（以破折号~分隔）
+
+十九、CSS 伪类(Pseudo-classes)
+  CSS伪类是用来添加一些选择器的特殊效果。
+  伪类语法：selector:pseudo-class {property:value;}
+  1、anchor伪类
+    在支持 CSS 的浏览器中，链接的不同状态都可以以不同的方式显示
+    a:link {color:#FF0000;} /* 未访问的链接 */
+    a:visited {color:#00FF00;} /* 已访问的链接 */
+    a:hover {color:#FF00FF;} /* 鼠标划过链接 */
+    a:active {color:#0000FF;} /* 已选中的链接 */
+    注意： 在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+    注意： 在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+    注意：伪类的名称不区分大小写。
+  2、CSS - :first - child伪类
+    您可以使用 :first-child 伪类来选择元素的第一个子元素
+  3、CSS - :focus 伪类
+    input:focus
+    {
+      background-color:yellow;
+    }
+  4、:lang 向带有指定 lang 属性开始的元素添加样式。
+    p:lang(it)
+    { 
+      background:yellow;
+    }
+    <p lang="it">Ciao bella!</p>
+二十、css
+  

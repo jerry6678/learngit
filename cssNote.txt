@@ -232,7 +232,71 @@ css学习笔记
   <span style="cursor:auto">auto</span><br>
   <span style="cursor:crosshair">crosshair</span><br>
 
-
-
-
-   选择文件
+十六、CSS Float(浮动)
+  CSS 的 Float（浮动）：会使元素向左或向右移动，其周围的元素也会重新排列。
+  Float（浮动），往往是用于图像，但它在布局时一样非常有用。
+  
+  1、元素怎样浮动？
+    元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。
+    一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+    浮动元素之后的元素将围绕它。
+    浮动元素之前的元素将不会受到影响。
+    如果图像是右浮动，下面的文本流将环绕在它左边
+  img 
+  {
+    float:left;
+  }
+  
+  2、清除浮动 - 使用 clear
+  元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。
+  clear 属性指定元素两侧不能出现浮动元素。
+  .text_line
+  {
+    clear:both;
+    margin-bottom:2px;
+  }【这样可以使得文本的两边都没有浮动元素】
+  
+  3、让段落的第一个字母浮动到左侧
+  span
+  {
+    float:left;
+    width:1.5em;
+    font-size:400%;
+    font-family:algerian,courier;
+    line-height:80%;
+  }
+  【第一个字嵌入在span 元素中。
+  这个 span 元素的宽度是当前字体大小的1.2倍。
+  这个 span 元素是当前字体的400%】
+  
+十七、CSS 水平对齐(Horizontal Align)
+  块元素：一个元素，占用了全宽，前后都是换行符。
+  块元素的例子：<h1>、<p>、<div>
+  1、块元素对齐
+    1）、中心对齐,使用margin属性
+    块元素可以把左，右页边距设置为"自动"对齐。
+    Note: 在IE8中使用margin:auto属性无法正常工作，除非声明 <!DOCTYPE html>
+    margin属性可任意拆分为左，右页边距设置自动指定，结果都是出现居中元素
+    .center
+    {
+      margin:auto;
+      width:70%;
+      background-color:#b0e0e6;
+    }
+    
+    2）、元素对齐的方法之一是使用绝对定位
+    .right
+    {
+      position:absolute;
+      right:0px;
+      width:300px;
+      background-color:#b0e0e6;
+    }
+    
+    3）、使用float属性设置左，右对齐
+    .right
+    {
+      float:right;
+      width:300px;
+      background-color:#b0e0e6;
+    }

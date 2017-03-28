@@ -204,7 +204,33 @@ css学习笔记
   }
   【如果有文字和图片重叠，因为该图片设置了z-index为-1，所以图片会在文字底下】
 
-  6.
+  6.剪裁元素
+  img 
+  {
+    position:absolute;
+    clip:rect(0px,60px,200px,0px);
+  }
+  【将元素裁剪，从上面开始顺时针四个边的长度】
+  
+  7.overflow 属性规定当内容溢出元素框时发生的事情。
+  div.scroll
+  {
+    overflow:scroll;
+  }【当内容溢出时，会自动添加滚动条】
+
+  div.hidden 
+  {
+    overflow:hidden;
+  }【当内容溢出时，会隐藏掉多余的】
+  
+  div.visible 
+  {
+    overflow:visible;
+  }【当内容溢出时，内容会跑出div继续显示，为默认值】
+  
+  8.cursor如何改变光标
+  <span style="cursor:auto">auto</span><br>
+  <span style="cursor:crosshair">crosshair</span><br>
 
 
 

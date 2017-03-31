@@ -1,0 +1,90 @@
+htmlNote
+一、html文本格式化
+  1、上下标
+    <p>这个文本包含<sub>下标</sub></p>
+    <p>这个文本包含<sup>上标</sup></p>
+  2、控制空行和空格
+    <pre>
+    此例演示如何使用 pre 标签
+    对空行和    空格
+    进行控制
+    </pre>
+  3、缩写
+    <abbr title="etcetera">etc.</abbr>
+    <p>您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+  4、引用
+    <q>Build a future where people live in harmony with nature.</q>
+  5、文字方式<bdo>
+    <p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p>
+    
+二、链接
+  1、语法：<a href="url">链接文本</a>
+    eg:<a href="http://www.runoob.com/">访问菜鸟教程</a>
+  2、target属性:你可以通过target属性定义超链接在哪里打开
+    _blank    在新窗口中打开被链接文档。
+    _self     默认。在相同的框架中打开被链接文档。
+    _parent   在父框架集中打开被链接文档。
+    _top      在整个窗口中打开被链接文档。
+
+  注释： 请始终将正斜杠添加到子文件夹。
+  假如这样书写链接：href="http://www.runoob.com/html"，就会向服务器产生两次 HTTP 请求。
+  这是因为服务器会添加正斜杠到这个地址，然后创建一个新的请求。
+  就像这样：href="http://www.runoob.com/html/"
+  
+  3、实例：
+  <p>
+    <a href="#C7">查看章节 4</a>
+  </p>
+
+  <h2 id="C7">章节 1</h2>
+  <p>这边显示该章节的内容……</p>
+  
+三、html头部
+  1、在 head 部分设置了 base 标签，该标签指定了页面上所有链接的默认 URL
+    eg：
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8"> 
+        <title>菜鸟教程(runoob.com)</title> 
+        <base href="http://www.runoob.com/images/" target="_blank">
+      </head>
+
+      <body>
+        <img src="logo.png">
+        注意这里我们设置了图片的相对地址。
+        能正常显示是因为我们在 head 部分设置了 base 标签，
+        该标签指定了页面上所有链接的默认 URL，
+        所以该图片的访问地址为 "http://www.runoob.com/images/logo.png"
+        <br><br>
+        <a href="http://www.runoob.com">菜鸟教程</a>
+        注意这个链接会在新窗口打开，即便它没有 target="_blank" 属性。
+        因为在 base 标签里我们已经设置了 target 属性的值为 "_blank"。
+      </body>
+    </html>
+    
+  2、HTML <head> 元素
+    <title> 标签定义了不同文档的标题。 在 HTML/XHTML 文档中是必须的。
+    <base> 标签描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接:
+      <base href="http://www.runoob.com/images/" target="_blank">
+    <link> 标签定义了文档与外部资源之间的关系。标签通常用于链接到样式表:
+      <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style> 元素中你可以直接添加样式来渲染 HTML 文档
+    <meta> 标签提供了元数据.元数据也不显示在页面上，但会被浏览器解析。
+      为搜索引擎定义关键词:
+      <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+      为网页定义描述内容:
+      <meta name="description" content="免费 Web & 编程 教程">
+      定义网页作者:
+      meta name="author" content="Runoob">
+      每30秒中刷新当前页面:
+      <meta http-equiv="refresh" content="30">
+      
+四、html图像
+  1、图像标签（ <img>）和源属性（Src）
+      <img> 是空标签，意思是说，它只包含属性，并且没有闭合标签。
+      src 指 "source"。源属性的值是图像的 URL 地址。
+      eg：<img src="url">
+  2、图像- Alt属性
+    在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。
+    此时，浏览器将显示这个替代性的文本而不是图像。
